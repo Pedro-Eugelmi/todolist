@@ -1,0 +1,285 @@
+:root{
+    --gbg: rgb(39, 34, 54);
+    --bg-color: rgb(56, 52, 75);
+    --blue:royalblue;
+}
+*{
+    box-sizing: border-box;
+    padding: 0px; margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    
+    background:linear-gradient(135deg, rgb(44, 47, 56), rgb(0, 0, 0));
+}
+h3{
+    color: goldenrod;
+    margin: 20px;
+}
+main{
+    min-height: 100vh;
+}
+
+h1{
+    color: goldenrod;
+    text-align: center;
+    padding: 20px;
+}
+.addTaskArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.addTask{
+    cursor: pointer;
+    font-size: 40px;
+    transition: 0.5s ease;
+    background-color: var(--bg-color);
+    padding:15px 20px 20px 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--blue);
+}
+.addTask input{
+    cursor: pointer;
+    outline:0;
+    border: 0;
+    padding: 10px;
+    border-radius: 15px;
+    width: 250px;
+}
+.addTask button{
+    background-color: var(--blue);
+    border: 0;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.listsArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.todoList, .doneList{
+    background-color: rgb(56, 52, 75);
+    min-height: 300px;
+    width: 50vw;
+    border: gray 2px solid;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+   
+}
+
+.noView{
+    display: none;
+}
+.modal {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 5%;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease ;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.modal-header{
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal input, .modal textarea{
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+}
+
+.modal textarea{
+    height: 100px;
+    resize: none;
+}
+.name-desc{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    gap: 10px;
+}
+.color-date{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.button button{
+    border: 0;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+.addTaskButton{
+    background-color: var(--blue);
+}
+.closeModalButton{
+    background-color: brown;
+}
+
+.taskblock, .doneTaskblock{
+    width:100%;
+    background-color: var(--gbg);
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.taskblock, .doneTaskblock h2{
+    color: white;
+
+}
+.taskblock, .doneTaskblock p {
+    color: gray;
+}
+.taskblock .upper, .doneTaskblock .upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+.done-name{
+    display: flex;
+    align-items: center;  
+
+}
+.done-button{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    margin-right: 10px;   
+}
+.done-button:hover{
+    opacity: 0.5;
+}
+.shadow{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 100;
+}
+i{
+    font-size: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+i:hover{
+    background-color: rgba(173, 171, 171, 0.514);
+    border-radius: 50%;
+}
+.bx-circle, .bx-check-circle{
+    color: cyan;
+}
+.bxs-edit{
+    color: goldenrod;
+}
+.bxs-x-circle{
+    color: red;
+}
+
+.name-task{
+    background-color: rgb(41, 38, 54);
+    border: 1px gray solid;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.done-name input{
+    padding-left: 10px;
+    width: 100%;
+}
+.desc-text{
+    border-radius: 10px;
+    background-color: rgb(41, 38, 54);
+    color: gray;
+    font-size: 15px;
+    resize: none;
+    padding-left: 10px;
+    width: 100%;
+
+}
+
+.readonlytrue{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+
+}
+.showDoneTaskButton{
+    margin-bottom: 10px;
+    background-color: var(--blue);
+    border: 0;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+footer{
+    width: 100%;
+    margin-top: 20px;
+    background-color: black;
+    border-top: gray 1px solid;
+}
+footer img{
+    width: 200px;
+    padding: 10px 25px;
+}
+
+.doneList  done-name input{
+    text-decoration: line-through;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .todoList, .doneList{
+        width: 80vw;
+    }
+    .modal{
+        width: 50vw;
+    }
+   
+}
+@media only screen and (max-width: 550px) {
+    i{
+        font-size: 20px;
+    }
+    .modal{
+        width: 70vw;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+
+
+  
+}

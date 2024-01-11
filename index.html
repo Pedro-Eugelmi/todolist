@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Easy Tasking</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body> 
+    <header>
+        <h1><a class='bx bx-list-check'></a>Easy Tasking</h1>
+    </header>
+    <main>
+        <div class="addTaskArea">
+            <div class="addTask" onclick="openModal()">
+                <div>
+                    <h6>Adicionar Task</h6>
+                </div>
+                <div>
+                    <input placeholder="Digite o nome da sua task..." readonly type="text"> <button>Enviar</button>
+                </div>
+                
+            </div>
+        </div>
+        <section class="listsArea">
+            <h3>To do List</h3>
+            <div class="todoList">
+                     
+            </div>
+            <h3>Done Tasks</h3>
+            <button class="showDoneTaskButton" onclick="showDoneTasks()">Show Done Tasks</button>
+            <div class="doneList noView" >
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="src/Logopedro.png" alt="">
+    </footer>
+    
+
+    <div class="modal" style="display: none;">
+        <div class="modal-header">
+            <h3>Adicionar Tarefa</h3> 
+        </div>
+        <div class="content">
+            <div class="name-desc">
+                <input placeholder="Digite um titulo" type="text">
+                <textarea placeholder="Dê uma descrição (opcional)." id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="button">
+            <button class="closeModalButton" onclick="closeModal()">Fechar</button>
+            <button class="addTaskButton">Adicionar</button>
+        </div>
+    </div>
+
+
+
+    <div style="display: none;" class="shadow"></div>
+
+    <audio class="clicked" src="audios/ding-sound-effect.mp3"></audio>
+<script src="script.js"></script>
+</body>
+</html>
