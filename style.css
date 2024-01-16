@@ -81,9 +81,9 @@ h1{
 }
 .modal {
     background-color: var(--bg-color);
-    padding: 20px;
+    width: 33vw;
+    padding: 10px;
     border-radius: 5%;
-    
     position: fixed;
     top: 50%;
     left: 50%;
@@ -211,7 +211,7 @@ i:hover{
     border: 1px gray solid;
     border-radius: 10px;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
 }
 .done-name input{
@@ -222,7 +222,7 @@ i:hover{
     border-radius: 10px;
     background-color: rgb(41, 38, 54);
     color: gray;
-    font-size: 15px;
+    font-size: 14px;
     resize: none;
     padding-left: 10px;
     width: 100%;
@@ -262,7 +262,7 @@ footer img{
 
 @media only screen and (max-width: 900px) {
     .todoList, .doneList{
-        width: 80vw;
+        width: 95vw;
     }
     .modal{
         width: 50vw;
@@ -271,10 +271,10 @@ footer img{
 }
 @media only screen and (max-width: 550px) {
     i{
-        font-size: 20px;
+        font-size: 30px;
     }
     .modal{
-        width: 90vw;
+        width: 95vw;
     }
 }
 
